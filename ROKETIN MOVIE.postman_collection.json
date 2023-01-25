@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "e77a011c-a86f-4a2b-bcba-4dac3fa109c9",
+		"name": "ROKETIN MOVIE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13962930"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Azil Khaq\",\n    \"email\": \"azilkhaq10@gmail.com\",\n    \"phone\": \"6281284277392\",\n    \"address\": \"Jalan Raya No 2\",\n    \"gender\": \"L\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"azilkhaq10@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GENRE",
+			"item": [
+				{
+					"name": "GENRE ADD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Horror\",\n    \"description\": \"Is Horror Genre\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/genre/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"genre",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENRE UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"genre_id\": 1,\n    \"name\": \"Horror\",\n    \"description\": \"Is Horror Genre\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/genre/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"genre",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENRE LIST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/genre/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"genre",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENRE INFO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/genre/info/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"genre",
+								"info",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENRE DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/genre/delete/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"genre",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MOVIE",
+			"item": [
+				{
+					"name": "MOVIE ADD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"genre_id\": 1,\n    \"name\": \"The Sea Beast\",\n    \"description\": \"Menceritakan tentang pertarungan menegangkan yang dialami oleh seorang pemburu monster laut bernama Jacob Holland yang merupakan seorang kapten kapal yang gagah berani. Jacob Holland memiliki misi untuk menaklukkan dan membasmi hewan-hewan buas yang gentayangan di lautan.\",\n    \"duration\": \"1 Jam 55 Menit\",\n    \"movie_url\": \"https://www.youtube.com/watch?v=BmllggGO4pM&t=3s\",\n    \"artist\": \"Karl Urban\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/movie/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOVIE UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 1,\n    \"genre_id\": 2,\n    \"name\": \"The Gray Man\",\n    \"description\": \"Court Gentry (Ryan Gosling), seorang napi yang direkrut oleh pejabat CIA bernama Donald Fitzroy (Billy Bob Thornton). Jika ingin bebas, ia harus menjadi agen sekaligus pembunuh bagi program Sierra. Court akhirnya menerima tawaran tersebut dan kini mengambil nama sandi SIX\",\n    \"duration\": \"2 Jam 2 Menit\",\n    \"movie_url\": \"https://www.youtube.com/watch?v=BmllggGO4pM&t=3s\",\n    \"artist\": \"Ryan Gosling\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/movie/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOVIE LIST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/movie/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOVIE INFO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/movie/info/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"info",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOVIE DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/movie/delete/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER ACTIVITY",
+			"item": [
+				{
+					"name": "USER ACTIVITY CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 3,\n    \"status\": \"liked\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user-activity/liked",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-activity",
+								"liked"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USER ACTIVITY WATCHED",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 3,\n    \"status\": \"watched\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user-activity/watched",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-activity",
+								"watched"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USER ACTIVITY SUMMARY",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user-activity/summary",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-activity",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJ1c2VyX2lkIjoiZDllMzdjZjktNTlmZS00MTJmLTlmMWItZjkwYjdiM2Q2Mjk2IiwiZnVsbG5hbWUiOiJBemlsIEtoYXEiLCJlbWFpbCI6ImF6aWxraGFxMTBAZ21haWwuY29tIiwicGhvbmUiOiI2MjgxMjg0Mjc3MzkyIiwiZ2VuZGVyIjoiTCIsImlhdCI6MTY3NDYzNjU0NX0.JiY8N6uoL49uBr9qUtXehtNdAopBFutNtuQtiJdv5-U",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8088",
+			"type": "string"
+		}
+	]
+}
